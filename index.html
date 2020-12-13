@@ -1,0 +1,362 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .roundStyle {
+            width: 120px;
+            height: 40px;
+            border-radius: 6px;
+            border-color: gainsboro;
+            background: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .group {
+            text-align: center;
+            display: inline-grid;
+            margin: 8px;
+        }
+
+        .group label {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <h1 class="text-center">Demo Export-To</h1>
+
+    <div class="text-center">
+
+        <div class="group">
+            <label>direction</label>
+            <select id="direction" class="roundStyle">
+                <option value="RTL">RTL</option>
+                <option value="LTR">LTR</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>position</label>
+            <select id="position" class="roundStyle">
+                <option value="middle">middle</option>
+                <option value="normal">normal</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>border</label>
+            <select id="border" class="roundStyle">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>frame</label>
+            <select id="frame" class="roundStyle">
+                <option value="void">void</option>
+                <option value="above">above</option>
+                <option value="below">below</option>
+                <option value="hsides">hsides</option>
+                <option value="lhs">lhs</option>
+                <option value="rhs">rhs</option>
+                <option value="vsides">vsides</option>
+                <option value="box">box</option>
+                <option value="border">border</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>rules</label>
+            <select id="rules" class="roundStyle">
+                <option value="none">none</option>
+                <option value="groups">groups</option>
+                <option value="rows">rows</option>
+                <option value="cols">cols</option>
+                <option value="all">all</option>
+            </select>
+        </div>
+
+
+
+        <div class="group">
+            <label>font_size_header</label>
+            <select id="font_size_header" class="roundStyle">
+                <option value="24">24</option>
+                <option value="20">20</option>
+                <option value="18">18</option>
+                <option value="16">16</option>
+                <option value="14">14</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+
+
+
+        <div class="group">
+            <label>font_size_caption</label>
+            <select id="font_size_caption" class="roundStyle">
+                <option value="26">26</option>
+                <option value="24">24</option>
+                <option value="20">20</option>
+                <option value="18">18</option>
+                <option value="16">16</option>
+                <option value="14">14</option>
+            </select>
+        </div>
+
+
+        <div class="group">
+            <label>font_size_body</label>
+            <select id="font_size_body" class="roundStyle">
+                <option value="24">24</option>
+                <option value="20">20</option>
+                <option value="18">18</option>
+                <option value="16">16</option>
+                <option value="14">14</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>font_weight_header</label>
+            <select id="font_weight_header" class="roundStyle">
+                <option value="bold">bold</option>
+                <option value="bolder">bolder</option>
+                <option value="normal">normal</option>
+                <option value="lighter">lighter</option>
+
+            </select>
+        </div>
+
+        <div class="group">
+            <label>font_weight_caption</label>
+            <select id="font_weight_caption" class="roundStyle">
+                <option value="bold">bold</option>
+                <option value="bolder">bolder</option>
+                <option value="normal">normal</option>
+                <option value="lighter">lighter</option>
+            </select>
+        </div>
+
+
+        <div class="group">
+            <label>font_weight_body</label>
+            <select id="font_weight_body" class="roundStyle">
+                <option value="bold">bold</option>
+                <option value="bolder">bolder</option>
+                <option selected value="normal">normal</option>
+                <option value="lighter">lighter</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>font_color_header</label>
+            <select id="font_color_header" class="roundStyle">
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>font_color_caption</label>
+            <select id="font_color_caption" class="roundStyle">
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+            </select>
+        </div>
+
+
+        <div class="group">
+            <label>font_color_body</label>
+            <select id="font_color_body" class="roundStyle">
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+            </select>
+        </div>
+
+
+        <div class="group">
+            <label>background_header</label>
+            <select id="background_header" class="roundStyle">
+                <option value="transparent">transparent</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>background_caption</label>
+            <select id="background_caption" class="roundStyle">
+                <option value="transparent">transparent</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>background_body</label>
+            <select id="background_body" class="roundStyle">
+                <option value="transparent">transparent</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>text_align</label>
+            <select id="text_align" class="roundStyle">
+                <option value="center">center</option>
+                <option value="left">left</option>
+                <option value="right">right</option>
+                <option value="justify">justify</option>
+            </select>
+        </div>
+
+
+        <div class="group">
+            <label>shift_width</label>
+            <select id="shift_width" class="roundStyle">
+                <option value="auto">auto</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="150">150</option>
+                <option value="200">200</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>shift_max_width</label>
+            <select id="shift_max_width" class="roundStyle">
+                <option value="150">150</option>
+                <option selected value="200">200</option>
+                <option value="250">250</option>
+                <option value="300">300</option>
+            </select>
+        </div>
+
+
+        <div class="group">
+            <label>image_height</label>
+            <select id="image_height" class="roundStyle">
+                <option value="200">200</option>
+                <option value="250">250</option>
+                <option selected value="300">300</option>
+                <option value="400">400</option>
+                <option value="500">500</option>
+            </select>
+        </div>
+
+
+    </div>
+
+    <div class="text-center">
+        <select id="selectType" class="roundStyle">
+            <option value="xls">xls</option>
+            <option value="csv">csv</option>
+            <option value="txt">txt</option>
+            <option value="json">json</option>
+            <option value="pdf">pdf</option>
+        </select>
+
+        <button onclick="btnExport()" id="btnExport" class="roundStyle">Export</button>
+    </div>
+
+
+    <script src="exporterTo.js"></script>
+
+    <script>
+
+        function btnExport() {
+
+
+            var filetype = document.getElementById("selectType").value;
+
+            switch (filetype) {
+
+                case "xls":
+                    filetype = FileTypes.XLS; break;
+                case "csv":
+                    filetype = FileTypes.CSV; break;
+                case "txt":
+                    filetype = FileTypes.TEXT; break;
+                case "json":
+                    filetype = FileTypes.JSON; break;
+                case "pdf":
+                    filetype = FileTypes.PDF; break;
+
+                default: filetype = FileTypes.XLS; break;
+            }
+
+
+
+            let body = [];
+
+            for (let i = 0; i < 12; i++) {
+
+                let arr = [];
+                for (let j = 0; j < 5; j++) {
+                    arr.push(`الخانة${i}${j}`);
+                }
+
+                body.push(arr);
+            }
+
+            var option = {
+                direction: document.getElementById('direction').value,
+                position: document.getElementById('position').value,
+                border: document.getElementById('border').value,
+                frame: document.getElementById('frame').value,
+                rules: document.getElementById('rules').value,
+                font_size_header: document.getElementById('font_size_header').value,
+                font_size_caption: document.getElementById('font_size_caption').value,
+                font_size_body: document.getElementById('font_size_body').value,
+                font_weight_header: document.getElementById('font_weight_header').value,
+                font_weight_caption: document.getElementById('font_weight_caption').value,
+                font_weight_body: document.getElementById('font_weight_body').value,
+                font_color_header: document.getElementById('font_color_header').value,
+                font_color_caption: document.getElementById('font_color_caption').value,
+                font_color_body: document.getElementById('font_color_body').value,
+                background_header: document.getElementById('background_header').value,
+                background_caption: document.getElementById('background_caption').value,
+                background_body: document.getElementById('background_body').value,
+                text_align: document.getElementById('text_align').value,
+                shift_width: document.getElementById('shift_width').value,
+                shift_max_width: document.getElementById('shift_max_width').value,
+                image_height: document.getElementById('image_height').value,
+            };
+
+            var convert = new ExportTo(filetype).Option(option).Header(["العامود1", "العامود2", "العامود3", "العامود4", "العامود5"]).Body(body)
+                .Image('https://via.placeholder.com/250x150.png').
+                Caption("This is demo").AsName("demo_exportTo").Export();
+            //To(filetype, "demo_exportTo")
+        };
+
+
+    </script>
+
+</body>
+
+</html>
