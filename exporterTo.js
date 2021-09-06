@@ -286,7 +286,7 @@ ing multi way to generate option
         //  border = pixels[CN]
         //                              This attributes specifies the width(in pixels only) of the frame around a table(see the Note below for more information about this attribute).
 
-        this._Collection += `<table style="table-layout: fixed; -fs-table-paginate: paginate;"  frame="${this._Option.frame}" rules="${this._Option.rules}" border="${this._Option.border}">`;
+        this._Collection += `<table style="table-layout: fixed;-fs-table-paginate: paginate;"  frame="${this._Option.frame}" rules="${this._Option.rules}" border="${this._Option.border}">`;
         this._Collection += this._Image;
         this._Collection += this._Caption;
         this._Collection += this._Header;
